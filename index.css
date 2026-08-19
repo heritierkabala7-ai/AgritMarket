@@ -254,6 +254,7 @@ footer a {
   .intro {
     display: block;
     margin-bottom: 30px;
+<<<<<<< HEAD:produit.css
   }
   .intro > p:last-child {
     margin-top: 20px;
@@ -328,4 +329,6 @@ footer a {
     width: 100%;
     text-align: center;
   }
+=======
+>>>>>>> 31dce6b6d71fce9d27d8f072995dcfba1a3af128:index.css
 }

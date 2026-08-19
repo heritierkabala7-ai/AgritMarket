@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <meta name="description" content="Contactez AgriMarket pour vos questions et commandes de produits agricoles.">
+    <title>AgriMarket | Contact</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    <section class="retour">
-        <a href="vente.html">← Acceuil</a>
-    </section>
-  
-    <header>
-        <h1>Contactez-nous</h1>
+<body class="contact-body">
+    <header class="header">
+        <a class="brand" href="vente.html" aria-label="AgriMarket, accueil">
+            <span class="brand-mark">A</span>
+            <span>Agri<span>Market</span></span>
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="vente.html">Accueil</a>
+            <a href="produit.html">Produits</a>
+            <a href="a propos.html">À propos</a>
+        </nav>
     </header>
-    <div class="details">
-        <ul>
-            <li>+23498575656</li>
-            <li>+2438246464</li>
-        </ul>
-    <header>
-        <H2>Nos pages</H2>
-    </header>
-        <ul>
-            <li>Facebook : AgiMarket</li>
-            <li>Instagram: AgriMarket120</li>
-            <li>Tiktok: Agri001</li>
-        </ul>
-        <header>
-           <p>Email : agrimarket200@gmail.com</p> 
-        </header>
-        
 
-    </div>
+    <main class="contact-layout">
+        <section class="contact-intro">
+            <a href="vente.html" class="retour"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Retour à l'accueil</a>
+            <p class="eyebrow"><span></span> Parlons ensemble</p>
+            <h1>Nous sommes<br><em>à votre écoute.</em></h1>
+            <p>Une question sur nos produits, une commande ou nos producteurs ? Notre équipe vous répond avec plaisir.</p>
+            <div class="contact-mark" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+        </section>
+
+        <section class="contact-panel" aria-labelledby="contact-title">
+            <div class="panel-heading"><span class="panel-number">01</span><div><p class="panel-kicker">Contact</p><h2 id="contact-title">Nos coordonnées</h2></div></div>
+            <div class="contact-list">
+                <a class="contact-item" href="tel:+23498575656"><span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span><span><small>Téléphone</small><strong>+234 985 756 56</strong></span><i class="fa-solid fa-arrow-up-right-from-square contact-arrow" aria-hidden="true"></i></a>
+                <a class="contact-item" href="tel:+2438246464"><span class="contact-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span><span><small>Mobile</small><strong>+243 824 646 4</strong></span><i class="fa-solid fa-arrow-up-right-from-square contact-arrow" aria-hidden="true"></i></a>
+                <a class="contact-item" href="mailto:agrimarket200@gmail.com"><span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span><span><small>E-mail</small><strong>agrimarket200@gmail.com</strong></span><i class="fa-solid fa-arrow-up-right-from-square contact-arrow" aria-hidden="true"></i></a>
+            </div>
+            <div class="social-block">
+                <p class="panel-kicker">Suivez notre actualité</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook AgriMarket"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span>AgriMarket</span></a>
+                    <a href="#" aria-label="Instagram AgriMarket"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>AgriMarket120</span></a>
+                    <a href="#" aria-label="TikTok AgriMarket"><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span>Agri001</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><span>AgriMarket</span><p>Des produits frais, de chez nous, pour vous.</p><a href="produit.html">Voir nos produits</a></footer>
 </body>
 </html>

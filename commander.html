@@ -1,43 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commander</title>
+    <meta name="description" content="Passez votre commande de produits frais avec AgriMarket.">
+    <title>AgriMarket | Passer une commande</title>
     <link rel="stylesheet" href="commander.css">
 </head>
-<body class="register-body">
-    <div class="register-container">
-        <a href="produit.html" class="retour">← </a>
-        <h1>Passez votre commande</h1>
+<body class="order-body">
+    <header class="header">
+        <a class="brand" href="vente.html" aria-label="AgriMarket, accueil">
+            <span class="brand-mark">A</span>
+            <span>Agri<span>Market</span></span>
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="vente.html">Accueil</a>
+            <a href="produit.html">Produits</a>
+            <a href="a propos.html">À propos</a>
+        </nav>
+    </header>
 
-        <form class="register-form">
-            <label>Nom </label>
-            <input type="text">
+    <main class="order-layout">
+        <section class="order-intro">
+            <a href="produit.html" class="retour">&#8592; Retour aux produits</a>
+            <p class="eyebrow"><span></span> AgriMarket</p>
+            <h1>Votre panier<br><em>commence ici.</em></h1>
+            <p>Indiquez simplement vos coordonnées et le produit que vous souhaitez recevoir. Nous vous recontacterons pour confirmer votre commande.</p>
+            <div class="fresh-note"><span>&#10003;</span><div><strong>Des produits frais</strong><small>Directement de nos producteurs locaux</small></div></div>
+        </section>
 
-            <label>Téléphone</label>
-            <input type="text" placeholder="+243821330610">
+        <section class="register-container" aria-labelledby="order-title">
+            <div class="form-heading"><span class="form-number">01</span><div><p class="form-kicker">Commande</p><h2 id="order-title">Vos informations</h2></div></div>
+            <form class="register-form">
+                <label for="name">Nom complet</label>
+                <input id="name" type="text" placeholder="Votre nom" required>
 
-            <label>Produits souhaités :</label>
-            <select>
-                <option>choisir</option>
-                <option value="">Produit 1</option>
-                <option value="">Produit 2</option>
-                <option value="">Produit 3</option>
-            </select>
+                <label for="phone">Téléphone</label>
+                <input id="phone" type="tel" placeholder="+243 821 330 610" required>
 
-            <label>Quantité :</label>
-            <input type="number" required>
+                <label for="product">Produit souhaité</label>
+                <select id="product" required>
+                    <option value="" selected disabled>Choisir un produit</option>
+                    <option value="tomates">Tomates fraîches</option>
+                    <option value="manioc">Manioc</option>
+                    <option value="bananes">Bananes fraîches</option>
+                </select>
 
-            <button type="submit">Commander</button>
-        </form>
-        <!--Bas-->
-        <p class="bas">
-            Besoin d'info ?
-            <a href="contact.html">Nous contacter</a>
-        </p>
+                <label for="quantity">Quantité <span class="unit">en kg</span></label>
+                <input id="quantity" type="number" min="1" placeholder="Ex : 2" required>
 
-    </div>
+                <button type="submit">Envoyer ma commande <span aria-hidden="true">&#8594;</span></button>
+            </form>
+            <p class="bas">Une question avant de commander ? <a href="contact.html">Nous contacter</a></p>
+        </section>
+    </main>
 
     
 </body>

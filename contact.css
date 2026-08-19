@@ -1,13 +1,369 @@
-header h1{
-    color: rgb(24, 91, 6);
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap");
+
+:root {
+  --green: #245c43;
+  --deep: #173d2d;
+  --lime: #dce97b;
+  --cream: #f7f5ed;
+  --ink: #1e2922;
+  --muted: #6b766d;
 }
-header h2{
-    color: rgb(24, 91, 6); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header p{
-    color: rgb(24, 91, 6); 
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
-section a{
-    text-decoration: none;
-    color: rgb(24, 91, 6) ;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.header {
+  max-width: 1240px;
+  margin: auto;
+  padding: 24px 34px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--deep);
+  font-size: 21px;
+  font-weight: 700;
+}
+.brand > span:last-child span,
+footer span {
+  color: #78a43e;
+}
+.brand-mark {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: var(--lime);
+  border-radius: 50% 50% 50% 4px;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  transform: rotate(-8deg);
+}
+.nav {
+  display: flex;
+  gap: 14px;
+  margin-left: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav a {
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav .active {
+  color: var(--deep);
+  border-color: #91b852;
+}
+.contact-layout {
+  max-width: 1060px;
+  min-height: 610px;
+  margin: auto;
+  padding: 64px 34px 92px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+.contact-intro {
+  padding-bottom: 24px;
+}
+.retour {
+  display: inline-block;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 75px;
+}
+.retour i {
+  margin-right: 8px;
+  font-size: 11px;
+}
+.eyebrow {
+  color: #789b4d;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+.eyebrow span {
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: #91b852;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.contact-intro h1 {
+  color: var(--deep);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(43px, 5vw, 65px);
+  line-height: 1.08;
+}
+.contact-intro h1 em {
+  color: #789b4d;
+  font-weight: 600;
+}
+.contact-intro > p:not(.eyebrow) {
+  max-width: 390px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-top: 23px;
+}
+.contact-mark {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  margin-top: 42px;
+  background: var(--lime);
+  color: var(--deep);
+  border-radius: 50% 50% 50% 4px;
+  font-size: 25px;
+  transform: rotate(-12deg);
+}
+.contact-panel {
+  background: white;
+  padding: 34px 38px 29px;
+  box-shadow: 0 18px 45px #1e292214;
+  border-top: 4px solid var(--green);
+}
+.panel-heading {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border-bottom: 1px solid #e2e5dc;
+  padding-bottom: 22px;
+  margin-bottom: 9px;
+}
+.panel-number {
+  color: #8dab55;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+.panel-kicker {
+  color: #86a950;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.panel-heading h2 {
+  color: var(--deep);
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #e8ebe4;
+  padding: 20px 0;
+}
+.contact-item:hover strong {
+  color: #789b4d;
+}
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  background: #e9f0ca;
+  color: var(--green);
+  border-radius: 50%;
+}
+.contact-item small,
+.contact-item strong {
+  display: block;
+}
+.contact-item small {
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+.contact-item strong {
+  color: var(--deep);
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.contact-arrow {
+  color: #9bb75e;
+  font-size: 11px;
+  margin-left: auto;
+}
+.social-block {
+  padding-top: 25px;
+}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 13px;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dce2d7;
+  padding: 9px 11px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+}
+.social-links a:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+.social-links i {
+  font-size: 14px;
+}
+footer {
+  background: var(--deep);
+  color: #dce4d5;
+  padding: 24px max(34px, calc((100% - 1172px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+}
+footer span {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+footer p {
+  border-left: 1px solid #ffffff33;
+  padding-left: 22px;
+}
+footer a {
+  color: var(--lime);
+  margin-left: auto;
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .header {
+    padding: 18px 20px;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6px;
+    margin: 0;
+    border-top: 1px solid #dce0d4;
+    padding-top: 12px;
+    font-size: 12px;
+  }
+  .nav a {
+    white-space: nowrap;
+  }
+  .contact-layout {
+    display: block;
+    min-height: 0;
+    padding: 32px 20px 60px;
+  }
+  .retour {
+    margin-bottom: 48px;
+  }
+  .contact-intro {
+    padding-bottom: 42px;
+  }
+  .contact-intro h1 {
+    font-size: 48px;
+  }
+  .contact-mark {
+    margin-top: 30px;
+  }
+  .contact-panel {
+    padding: 28px 22px 24px;
+  }
+  .social-links a {
+    flex: 1 1 auto;
+  }
+  footer {
+    flex-wrap: wrap;
+    padding: 24px 20px;
+  }
+  footer p {
+    order: 3;
+    width: 100%;
+    border: 0;
+    padding: 0;
+  }
+  footer a {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+  .brand {
+    font-size: 18px;
+    gap: 7px;
+  }
+  .brand-mark {
+    width: 31px;
+    height: 31px;
+    font-size: 19px;
+  }
+  .nav {
+    gap: 7px;
+    font-size: 11px;
+  }
+  .contact-layout {
+    padding: 24px 14px 45px;
+  }
+  .retour {
+    margin-bottom: 38px;
+  }
+  .contact-intro h1 {
+    font-size: 43px;
+  }
+  .contact-intro > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .contact-panel {
+    padding: 24px 16px 21px;
+  }
+  .contact-item {
+    gap: 10px;
+  }
+  .contact-item strong {
+    font-size: 12px;
+  }
+  .contact-arrow {
+    font-size: 9px;
+  }
+  .social-links {
+    gap: 6px;
+  }
+  .social-links a {
+    padding: 8px 9px;
+    font-size: 10px;
+  }
 }

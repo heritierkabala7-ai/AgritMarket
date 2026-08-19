@@ -71,17 +71,71 @@ footer span {
   color: var(--deep);
   border-color: #91b852;
 }
-.featured-products {
-  max-width: 1240px;
+.about-layout {
+  max-width: 1120px;
   margin: auto;
-  padding: 55px 34px 90px;
+  padding: 45px 34px 90px;
 }
-.intro {
+.about-hero {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 490px;
+}
+.hero-image {
+  position: relative;
+  max-width: 430px;
+}
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 88%;
+  height: 92%;
+  left: -18px;
+  bottom: -18px;
+  background: var(--lime);
+}
+.hero-image img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 425px;
+  object-fit: cover;
+}
+.image-label {
+  position: absolute;
+  z-index: 2;
+  right: -40px;
+  bottom: 28px;
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 42px;
+  align-items: center;
+  gap: 11px;
+  background: white;
+  padding: 14px 17px;
+  box-shadow: 0 10px 28px #1e29221f;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.image-label i {
+  color: var(--green);
+  font-size: 22px;
+}
+.image-label strong {
+  color: var(--deep);
+}
+.back-link {
+  display: inline-block;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 62px;
+}
+.back-link i {
+  margin-right: 8px;
+  font-size: 11px;
 }
 .eyebrow {
   color: #789b4d;
@@ -99,112 +153,78 @@ footer span {
   vertical-align: middle;
   margin-right: 8px;
 }
-.intro h1 {
+.hero-copy h1 {
   color: var(--deep);
   font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: clamp(43px, 5vw, 65px);
   line-height: 1.08;
 }
-.intro h1 em {
+.hero-copy h1 em {
   color: #789b4d;
   font-weight: 600;
 }
-.intro > p:last-child {
-  max-width: 280px;
+.hero-copy > p:last-child {
+  max-width: 430px;
   color: var(--muted);
+  line-height: 1.75;
   font-size: 15px;
-  line-height: 1.7;
-  padding-bottom: 4px;
+  margin-top: 23px;
 }
-.products {
+.mission {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 90px;
+  border-top: 1px solid #dce0d4;
+  padding-top: 45px;
+  margin-top: 35px;
+  align-items: end;
 }
-.product-card {
-  background: white;
-  box-shadow: 0 12px 30px #1e29220d;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+.mission .eyebrow {
+  margin-bottom: 12px;
 }
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 35px #1e29221c;
-}
-.product-image {
-  position: relative;
-  overflow: hidden;
-}
-.product-image img {
-  display: block;
-  width: 100%;
-  height: 285px;
-  object-fit: cover;
-  transition: transform 0.35s;
-}
-.product-card:hover .product-image img {
-  transform: scale(1.04);
-}
-.location {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: white;
-  color: var(--green);
-  padding: 8px 13px;
-  font-size: 11px;
-  font-weight: 700;
-}
-.location::before {
-  content: "●";
-  color: #91b852;
-  font-size: 9px;
-  margin-right: 6px;
-}
-.product-info {
-  padding: 21px 20px 20px;
-}
-.category {
-  color: #86a950;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  font-weight: 700;
-}
-.product-info h2 {
+.mission h2 {
+  max-width: 570px;
   color: var(--deep);
   font-family: "Playfair Display", serif;
-  font-size: 23px;
-  margin: 8px 0 21px;
+  font-size: 31px;
+  line-height: 1.2;
 }
-.product-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+.mission > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
 }
-.price {
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 34px;
+}
+.value-card {
+  background: white;
+  padding: 25px 22px;
+  box-shadow: 0 10px 26px #1e29220d;
+}
+.value-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  background: #e9f0ca;
   color: var(--green);
-  font-size: 17px;
-  font-weight: 700;
+  border-radius: 50%;
+  margin-bottom: 19px;
 }
-.price span {
+.value-card h3 {
+  color: var(--deep);
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+.value-card p {
   color: var(--muted);
   font-size: 12px;
-  font-weight: 400;
-}
-.commander {
-  background: var(--green);
-  color: white;
-  padding: 11px 13px;
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.commander span {
-  color: var(--lime);
-  margin-left: 5px;
+  line-height: 1.65;
 }
 footer {
   background: var(--deep);
@@ -248,26 +268,46 @@ footer a {
   .nav a {
     white-space: nowrap;
   }
-  .featured-products {
+  .about-layout {
     padding: 32px 20px 60px;
   }
-  .intro {
+  .about-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 45px;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .back-link {
+    margin-bottom: 48px;
+  }
+  .hero-copy h1 {
+    font-size: 48px;
+  }
+  .hero-image {
+    width: calc(100% - 18px);
+    margin: 0 18px 0 0;
+    align-self: center;
+  }
+  .hero-image img {
+    height: 300px;
+  }
+  .image-label {
+    right: -10px;
+    bottom: 18px;
+  }
+  .mission {
     display: block;
-    margin-bottom: 30px;
+    margin-top: 55px;
   }
-  .intro > p:last-child {
+  .mission h2 {
+    font-size: 28px;
+  }
+  .mission > p {
     margin-top: 20px;
-    max-width: 360px;
   }
-  .intro h1 {
-    font-size: 47px;
-  }
-  .products {
+  .values {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .product-image img {
-    height: 250px;
   }
   footer {
     flex-wrap: wrap;
@@ -301,31 +341,34 @@ footer a {
     gap: 7px;
     font-size: 11px;
   }
-  .featured-products {
+  .about-layout {
     padding: 24px 14px 45px;
   }
-  .intro h1 {
-    font-size: 42px;
+  .back-link {
+    margin-bottom: 38px;
   }
-  .intro > p:last-child {
+  .hero-copy h1 {
+    font-size: 43px;
+  }
+  .hero-copy > p:last-child {
     font-size: 14px;
   }
-  .product-image img {
-    height: 220px;
+  .hero-image {
+    width: calc(100% - 10px);
+    margin-right: 10px;
   }
-  .product-info {
-    padding: 18px 15px;
+  .hero-image img {
+    height: 250px;
   }
-  .product-info h2 {
-    font-size: 21px;
+  .image-label {
+    right: -7px;
+    padding: 10px 11px;
+    font-size: 10px;
   }
-  .product-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
+  .mission {
+    margin-top: 45px;
   }
-  .commander {
-    width: 100%;
-    text-align: center;
+  .mission h2 {
+    font-size: 25px;
   }
 }

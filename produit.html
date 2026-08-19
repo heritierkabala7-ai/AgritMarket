@@ -3,66 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produits en Vedette</title>
+    <meta name="description" content="Découvrez les produits agricoles frais proposés par AgriMarket.">
+    <title>AgriMarket | Nos produits</title>
     <link rel="stylesheet" href="produit.css">
 </head>
 <body>
 
-    <section class="feactured-products">
-        <div class="retour">
-            <a href="vente.html">← Acceuil</a>
+    <header class="header">
+        <a class="brand" href="vente.html" aria-label="AgriMarket, accueil">
+            <span class="brand-mark">A</span>
+            <span>Agri<span>Market</span></span>
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="vente.html">Accueil</a>
+            <a class="active" href="produit.html">Produits</a>
+            <a href="a propos.html">À propos</a>
+        </nav>
+    </header>
+
+    <main class="featured-products">
+        <div class="intro">
+            <p class="eyebrow"><span></span> Le choix du jour</p>
+            <h1>Des récoltes fraîches<br><em>pour votre table.</em></h1>
+            <p>Découvrez les produits proposés par nos agriculteurs locaux, sélectionnés avec soin.</p>
         </div>
-        <h1>Produits en vedettes</h1>
-        <p>Des récoltes fraiches proposées par nos agriculteurs</p>
 
         <div class="products">
-            <!--Produit 1-->
             <div class="product-card">
                 <div class="product-image">
-                    <img width="150px" src="tomate.jpg" alt="tomate">
-                    <span class="location">📍Zigida</span>
+                    <img src="tomate.jpg" alt="Tomates fraîches">
+                    <span class="location">Zigida</span>
                 </div>
                 <div class="product-info">
-                    <h3>Tomate fraiches</h3>
-                    <div class="price">
-                         650 CDF / <span>kg</span>
-                    </div>
-                    <button class="commander"><a href="commander.html">Commander →</a></button>
+                    <span class="category">Légumes</span>
+                    <h2>Tomates fraîches</h2>
+                    <div class="product-bottom"><div class="price">650 CDF <span>/ kg</span></div><a class="commander" href="commander.html">Commander <span>→</span></a></div>
                 </div>
             </div>
-            <!--Produit 2-->
             <div class="product-card">
                 <div class="product-image">
-                    <img width="150px" src="manioc.jpg" alt="manioc">
-                    <span class="location">📍 Korhogo</span>
+                    <img src="manioc.jpg" alt="Manioc frais">
+                    <span class="location">Korhogo</span>
                 </div>
                 <div class="product-info">
-                    <h3>Manioc</h3>
-                    <div class="price">
-                        800 CDF / <span>kg</span>
-                    </div>
-                    <button class="commander"><a href="commander.html">Commander →</a></button>
+                    <span class="category">Racines</span>
+                    <h2>Manioc</h2>
+                    <div class="product-bottom"><div class="price">800 CDF <span>/ kg</span></div><a class="commander" href="commander.html">Commander <span>→</span></a></div>
                 </div>
             </div>
-            
-            <!--Produit 3-->
             <div class="product-card">
                 <div class="product-image">
-                    <img width="150px" src="banane.jpg" alt="manioc">
-                    <span class="location">📍 bas congo</span>
+                    <img src="banane.jpg" alt="Bananes fraîches">
+                    <span class="location">Bas-Congo</span>
                 </div>
                 <div class="product-info">
-                    <h3>Banane</h3>
-                    <div class="price">
-                        800 CDF / <span>kg</span>
-                    </div>
-                    <button class="commander"><a href="commander.html">Commander →</a></button>
+                    <span class="category">Fruits</span>
+                    <h2>Bananes fraîches</h2>
+                    <div class="product-bottom"><div class="price">800 CDF <span>/ kg</span></div><a class="commander" href="commander.html">Commander <span>→</span></a></div>
                 </div>
             </div>
-
-
         </div>
-
-    </section>      
+    </main>
+    <footer><span>AgriMarket</span><p>Des produits frais, de chez nous, pour vous.</p><a href="contact.html">Nous contacter</a></footer>
 </body>
 </html>
